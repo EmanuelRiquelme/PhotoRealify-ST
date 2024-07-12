@@ -359,7 +359,7 @@ def prompt_image_to_image(workflow, input_path, positve_prompt, negative_prompt=
   filename = input_path.split('/')[-1]
   prompt.get(image_loader)['inputs']['image'] = filename
 
-  image = generate_image_by_prompt_and_image(prompt, './ComfyUI/output/blog/img2img', input_path, filename, save_previews)#I modified this
+  image = generate_image_by_prompt_and_image(prompt, './ComfyUI/output/blog/img2img', input_path, filename, save_previews)
   return image
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -383,10 +383,3 @@ def wait_for_connection(server_address, max_attempts=30, retry_interval=2):
 def run_server():
     server_process = subprocess.Popen(['python3', 'ComfyUI/main.py'])
     server_process.wait()
-
-if __name__ == '__main__':
-    workflow = load_workflow('prompt.json')
-    input_path = '1.jpg'
-    prompt ='cinematic photo a black car on the snow, with a single shadow. . 35mm photograph, film, bokeh, professional, 4k, highly detailed'
-    image = prompt_image_to_image(workflow, input_path, prompt, save_previews=True)
-    image.show()
