@@ -12,9 +12,13 @@ git clone https://github.com/EmanuelRiquelme/PhotoRealify-ST
 ```
 * Clone ComfyUI:
 ```
-https://github.com/EmanuelRiquelme/ComfyUI
+git clone https://github.com/EmanuelRiquelme/ComfyUI
 ```
-* Install the dependencies:
+* Install the dependencies of ComfyUI:
+```
+pip3 install -r ComfyUI/requirements.txt
+```
+* Install the dependencies of PhotoRealify
 ```
 pip3 install -r requirements.txt
 ```
